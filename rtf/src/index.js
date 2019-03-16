@@ -1,14 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Canvas } from 'react-three-fiber';
-import './index.css' // Make sure to give #root a size, or the canvas will stretch
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './index.css';
 
 ReactDOM.render(
-  <Canvas>
-    <App vertices={[[-1, 0, 0], [0, 1, 0], [1, 0, 0], [0, -1, 0], [-1, 0, 0]]} />
-  </Canvas>,
+  <App />,
   document.getElementById('root')
 )
 // ReactDOM.render(<App />, document.getElementById('root'));
