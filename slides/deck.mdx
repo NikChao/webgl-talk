@@ -4,49 +4,25 @@ export { default as theme } from './theme'
 ### with react-three-fiber
 ---
 
-### What are types 
+### Types of animation
+
+- keyframes/transitions (great for simple animations)
+- js animations (rAF or WAAPI) (great for more complicated but less performance heavy animations, bad support on WAAPI)
+- canvas (powerful but not very accessible)
+- canvas WebGL (powerful, hardware accelerated, 3D, but hard. Or is it?)
 
 ---
 
- - Associating types with the variable, not the value
- - Type checking is done at compile time rather than runtime
-
+### WebGL
 
 ---
 
-### why do we use them?
-(or not)
+### Three.js
 
 ---
 
-### Cons
- - More clutter
- - Harder to explain abstract ideas
+### react-three-fiber
 
----
-
-<!--
-Some/most devs will know some of the advantages of type systems, so I wouldn't go to far into it, but I would summarise them.
--->
-### Pros
- - document functions
- - clarify usage
- - reduce cognitive overhead
- - help catch bugs at dev time
- - Tooling / IDE integration
-
----
-
-### Why are we talking about types?
-
----
-## DX!
----
-- type hints
-- better code search/discoverability/documentation
-- dependable refactoring
----
-Tooling improved a lot in 2018
 ---
 
 # The end
