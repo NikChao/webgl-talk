@@ -22,13 +22,11 @@ export { default as theme } from './theme'
 ---
 
 - Working with vertices and shaders
-- **Vertex Shaders:** transforms code from original coordinate system to the clipspace coordinate system used by WebGL (-1, +1) and assigns it to a variable called **gl_Position**
-- **Fragment Shaders:** called once for every pixel for every shape to be drawn. It's job is to figure out the colour to apply to the pixel. This takes lighting, textures, etc. into account.
+- **Vertex Shaders:** 
+<!-- transforms code from original coordinate system to the clipspace coordinate system used by WebGL (-1, +1) and assigns it to a variable called **gl_Position** -->
+- **Fragment Shaders:**
+<!-- called once for every pixel for every shape to be drawn. It's job is to figure out the colour to apply to the pixel. This takes lighting, textures, etc. into account. -->
 - A vertex + fragment shader together make up a **program**.
-
----
-
-### A lot to think about
 
 ---
 
@@ -37,23 +35,29 @@ export { default as theme } from './theme'
   - compiled
   - loaded into the WebGL context
 
-- You need to create buffers for passing data to and from your shaders
+- Buffers 
+<!-- need to be allocated for passing data to and from your shaders -->
 
-- Create a perspective, bind buffers, deal with attributes 
+- Create a perspective, bind buffers, then you can deal with attributes and positions 
 
 ---
 
 - 3D Rendering: rendering many elements at different orrientations
 <!-- cube example -->
-<!-- If this is a cube could you imagine making a sphere? Or fluids movement? -->
 
 - Animation: updating vertex positions with matrix transformations
 
 - Lighting: involves even more matrices and complicated logic
 
+<!-- If this is a cube could you imagine making a sphere? Or fluids movement? -->
+
 ---
 
 ### WebGL Example
+
+---
+
+### A lot to think about
 
 ---
 
@@ -67,6 +71,7 @@ export { default as theme } from './theme'
   - rotations
   - colors
   - morph targets
+- Math is abstracted out
 
 ---
 
