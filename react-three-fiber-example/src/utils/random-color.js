@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-export const getRandomColor = _.memoize((c) => {
+export default _.memoize((key) => {
   var letters = '0123456789ABCDEF';
   var color = '#';
   for (var i = 0; i < 6; i++) {
