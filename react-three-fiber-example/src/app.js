@@ -5,6 +5,7 @@ import makeCoordinates from 'utils/make-coordinates';
 import getRandomColor from 'utils/random-color';
 import getKeys from 'utils/keys';
 import getMouse, { yOutOfDeadzone, xOutOfDeadzone } from 'utils/mouse';
+import { ROTATION_SPEED } from 'utils/constants';
 
 function Container ({ coords }) {
   useRender(({ camera }) => {
@@ -19,10 +20,10 @@ function Container ({ coords }) {
     if (down) { camera.position.z += 0.1 }
 
     if (yOutOfDeadzone()) {
-      camera.rotation.x -= y / 50;
+      camera.rotation.x -= y * ROTATION_SPEED;
     }
     if (xOutOfDeadzone()) {
-      camera.rotation.y -= x / 50;
+      camera.rotation.y -= x * ROTATION_SPEED;
     }
   })
 
@@ -30,7 +31,6 @@ function Container ({ coords }) {
     <group>
       <ambientLight color="white" intensity={0.1} />
       <pointLight color="white" intensity={1} position={[10, 10, 10]} />
-
       {coords.map(coordinates => <Sphere {...coordinates} color={getRandomColor(coordinates)} />)}
     </group>
   )

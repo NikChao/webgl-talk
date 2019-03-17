@@ -1,0 +1,1 @@
+export const ROTATION_SPEED = 1/30;

@@ -1,3 +1,5 @@
+const DEADZONE = 0.05;
+
 let x = 0;
 let y = 0;
 
@@ -11,9 +13,9 @@ export default function getMouse () {
 }
 
 export function xOutOfDeadzone () {
-  return x > 0.1 || x < -0.1;
+  return x > DEADZONE || x < -DEADZONE;
 }
 
 export function yOutOfDeadzone () {
-  return y > 0.1 || y < -0.1;
+  return y > DEADZONE || y < -DEADZONE;
 }
