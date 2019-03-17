@@ -42,7 +42,7 @@ export { default as theme } from './theme'
 
 ---
 
-- working with cameras, geometries, materials, lights
+- working with a scene, cameras, geometries, materials, lights
 - Animation: tweaking properties of objects in your scene, and re-rendering
   - positions
   - rotations
@@ -55,7 +55,11 @@ export { default as theme } from './theme'
 
 ---
 
-- Interactions with raycasters
+- State: need to manage your scene state
+- No handlers, interactions with objects in the scene need to use/understand raycasters
+<div style={{ paddingLeft: '20%', paddingTop: '30px', width: '100%' }}>
+  <img style={{ backgroundColor: 'whitesmoke', left: '40%', height: '400px', width: 'auto' }} src="./raycaster.png" />
+</div>
 
 ---
 
@@ -67,6 +71,13 @@ export { default as theme } from './theme'
 - Uses heuristics for objects and attributes
 - Handlers included
 - We can now make reusable, declarative trees for our canvas!
+
+---
+
+### Some downsides
+- Easy to write unperformant code
+- Same control as three.js but it's not obvious
+- Handlers don't always behave how you expect
 
 ---
 
