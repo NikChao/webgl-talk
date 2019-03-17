@@ -4,12 +4,16 @@ export { default as theme } from './theme'
 ### with react-three-fiber
 ---
 
-### Types of animation
+### Animation technologies
 
-- keyframes/transitions (great for simple animations)
-- js animations (rAF or WAAPI) (great for more complicated but less performance heavy animations, bad support on WAAPI)
-- canvas (powerful but not very accessible)
-- canvas WebGL (powerful, hardware accelerated, 3D, but hard. Or is it?)
+- keyframes/transitions
+<!-- great for simple animations) -->
+- js animations (rAF or WAAPI)
+<!-- (great for more complicated but less performance heavy animations, bad support for WAAPI right now) -->
+- canvas
+<!-- powerful but not very accessible) -->
+- **WebGL**
+<!-- (powerful, hardware accelerated, 3D, but hard. Or is it?)** -->
 
 ---
 
@@ -24,17 +28,32 @@ export { default as theme } from './theme'
 
 ---
 
-- Shaders need to be initialised, compiled & loaded into the program
-- You need to create buffers for passing data to and from your shaders
-- Create a perspective, bind buffers, get attributes 
+### A lot to think about
 
 ---
 
-- Rendering 3D objects becomes a matter of abstracting away elements and rendering more of them at different positions & rotations. If this is a cube could you imagine making a sphere? Or implementing fluid movement?
+- Shaders need to be
+  - initialised
+  - compiled
+  - loaded into the WebGL context
 
-- Animating involves updating vertex positions with matrix transformations,
+- You need to create buffers for passing data to and from your shaders
 
-- Lighting involves even more matrices and complicated logic
+- Create a perspective, bind buffers, deal with attributes 
+
+---
+
+- 3D Rendering: rendering many elements at different orrientations
+<!-- cube example -->
+<!-- If this is a cube could you imagine making a sphere? Or fluids movement? -->
+
+- Animation: updating vertex positions with matrix transformations
+
+- Lighting: involves even more matrices and complicated logic
+
+---
+
+### WebGL Example
 
 ---
 
@@ -51,10 +70,15 @@ export { default as theme } from './theme'
 
 ---
 
+### ThreeJS example
+
+---
+
 ### Surely it can't get easier?
 
 ---
 
+### Issues to address
 - State: need to manage your scene state
 - No handlers, interactions with objects in the scene need to use/understand raycasters
 <div style={{ paddingLeft: '20%', paddingTop: '30px', width: '100%' }}>
@@ -74,7 +98,12 @@ export { default as theme } from './theme'
 
 ---
 
+### react-three-fiber example
+
+---
+
 ### Some downsides
+
 - Easy to write unperformant code
 - Same control as three.js but it's not obvious
 - Handlers don't always behave how you expect
