@@ -17,7 +17,45 @@ export { default as theme } from './theme'
 
 ---
 
+- Working with vertices and shaders
+- **Vertex Shaders:** transforms code from original coordinate system to the clipspace coordinate system used by WebGL (-1, +1) and assigns it to a variable called **gl_Position**
+- **Fragment Shaders:** called once for every pixel for every shape to be drawn. It's job is to figure out the colour to apply to the pixel. This takes lighting, textures, etc. into account.
+- A vertex + fragment shader together make up a **program**.
+
+---
+
+- Shaders need to be initialised, compiled & loaded into the program
+- You need to create buffers for passing data to and from your shaders
+- Create a perspective, bind buffers, get attributes 
+
+---
+
+- Rendering 3D objects becomes a matter of abstracting away elements and rendering more of them at different positions & rotations. If this is a cube could you imagine making a sphere? Or implementing fluid movement?
+
+- Animating involves updating vertex positions with matrix transformations,
+
+- Lighting involves even more matrices and complicated logic
+
+---
+
 ### Three.js
+
+---
+
+- working with cameras, geometries, materials, lights
+- Animation: tweaking properties of objects in your scene, and re-rendering
+  - positions
+  - rotations
+  - colors
+  - morph targets
+
+---
+
+### Surely it can't get easier?
+
+---
+
+- Interactions with raycasters
 
 ---
 
@@ -25,4 +63,19 @@ export { default as theme } from './theme'
 
 ---
 
-# The end
+- React renderer for threejs
+- Uses heuristics for objects and attributes
+- Handlers included
+- We can now make reusable, declarative trees for our canvas!
+
+---
+
+- https://threejs.org/
+- https://github.com/drcmda/react-three-fiber
+- https://webglfundamentals.org/
+
+---
+
+<div style={{ height: '100%', width: '100%', position: 'absolute', transform: 'translate(-50%, -50%)'}}>
+  <h1>End</h1>
+</div>
