@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 const COLORS = [
   /* Blue */
   '#1B58CE'
@@ -38,6 +36,8 @@ const COLORS = [
   ,'#E7BB01'
 ]
 
-export default _.memoize((key) =>
-  COLORS[Math.floor(Math.random() * COLORS.length)]
-);
+const getRandomColor = key => {
+  const c = COLORS[Math.floor(Math.random() * COLORS.length)];
+  console.log(c);
+  return c;
+}
