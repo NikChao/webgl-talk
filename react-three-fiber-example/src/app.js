@@ -34,8 +34,15 @@ function Container ({ coords }) {
       <ambientLight color="white" intensity={0.1} />
       <pointLight color="white" intensity={1} position={[10, 10, 10]} />
       {coords.map((coordinates, i) => {
-        if (i % 2) return <Sphere {...coordinates} color={getRandomColor(coordinates)} />
-        return <Box {...coordinates} color={getRandomColor(coordinates)} />
+        if (i % 2) {
+          return (
+            <Sphere {...coordinates} color={getRandomColor(coordinates)} />
+          );
+        }
+
+        return (
+          <Box {...coordinates} color={getRandomColor(coordinates)} />
+        );
       })}
     </group>
   )
