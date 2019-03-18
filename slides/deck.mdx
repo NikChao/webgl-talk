@@ -21,24 +21,25 @@ export { default as theme } from './theme'
 
 ---
 
-- Working with vertices and shaders
-- **Vertex Shaders:** 
+### A few concepts
+- **Vertex**
+- **Vertex Shaders** 
 <!-- transforms code from original coordinate system to the clipspace coordinate system used by WebGL (-1, +1) and assigns it to a variable called **gl_Position** -->
-- **Fragment Shaders:**
+- **Fragment Shaders**
 <!-- called once for every pixel for every shape to be drawn. It's job is to figure out the colour to apply to the pixel. This takes lighting, textures, etc. into account. -->
 - A vertex + fragment shader together make up a **program**.
 
 ---
 
+### Boilerplate
 - Shaders need to be
   - initialised
   - compiled
   - loaded into the WebGL context
-
 - Buffers 
 <!-- need to be allocated for passing data to and from your shaders -->
-
-- Create a perspective, bind buffers, then you can deal with attributes and positions 
+- Create a perspective
+- Bind buffers
 
 ---
 
@@ -65,13 +66,14 @@ export { default as theme } from './theme'
 
 ---
 
-- working with a scene, cameras, geometries, materials, lights
-- Animation: tweaking properties of objects in your scene, and re-rendering
-  - positions
-  - rotations
-  - colors
-  - morph targets
-- Math is abstracted out
+### Concepts
+- scene
+<!-- Scenes allow you to set up what and where is to be rendered by three.js. This is where you place objects, lights and cameras. -->
+- cameras
+- lights
+- mesh
+  - geometries
+  - materials
 
 ---
 
@@ -79,15 +81,12 @@ export { default as theme } from './theme'
 
 ---
 
-### Surely it can't get easier?
 
----
-
-### Issues to address
+### What can we make easier?
 - State: need to manage your scene state
-- No handlers, interactions with objects in the scene need to use/understand raycasters
+- No handlers, interactions with objects is verbose
 <div style={{ paddingLeft: '20%', paddingTop: '30px', width: '100%' }}>
-  <img style={{ backgroundColor: 'whitesmoke', left: '40%', height: '400px', width: 'auto' }} src="./raycaster.png" />
+  <img style={{ backgroundColor: 'whitesmoke', left: '40%', height: '400px', width: 'auto' }} src="./raycaster.jpg" />
 </div>
 
 ---
