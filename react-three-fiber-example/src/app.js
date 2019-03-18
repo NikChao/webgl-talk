@@ -1,11 +1,13 @@
 import React from 'react'
 import { Canvas, useRender } from 'react-three-fiber';
-import Sphere from 'components/sphere';
 import makeCoordinates from 'utils/make-coordinates';
 import getRandomColor from 'utils/random-color';
 import getKeys from 'utils/keys';
 import getMouse, { yOutOfDeadzone, xOutOfDeadzone } from 'utils/mouse';
 import { ROTATION_SPEED } from 'utils/constants';
+
+import Sphere from 'components/sphere';
+import Box from 'components/box';
 
 function Container ({ coords }) {
   useRender(({ camera }) => {
@@ -31,7 +33,10 @@ function Container ({ coords }) {
     <group>
       <ambientLight color="white" intensity={0.1} />
       <pointLight color="white" intensity={1} position={[10, 10, 10]} />
-      {coords.map(coordinates => <Sphere {...coordinates} color={getRandomColor(coordinates)} />)}
+      {coords.map((coordinates, i) => {
+        if (i % 2) return <Sphere {...coordinates} color={getRandomColor(coordinates)} />
+        return <Box {...coordinates} color={getRandomColor(coordinates)} />
+      })}
     </group>
   )
 }

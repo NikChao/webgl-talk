@@ -1,4 +1,4 @@
-const DEADZONE = 0.05;
+const DEADZONE = 0.1;
 
 let x = 0;
 let y = 0;
